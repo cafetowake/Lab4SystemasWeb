@@ -5,4 +5,27 @@
     position: fixed;
     top: 0;
     left: 0;
-  }
+}
+
+.vidrio {
+    width: 200px;
+    height: 190px;
+    background-color: #E8E8E3;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    border-radius: 6%;
+}
+
+.vidrio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E8E8E3;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    border-radius: 6%;
+}
