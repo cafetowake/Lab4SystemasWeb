@@ -1,16 +1,42 @@
-.background {
-    background-color: #FCC68F;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conendor {
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+    background-color: #FCC68F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#Drinking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.background {
+    width: clamp(300px, 80vw, 800px);
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #FCC68F; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
 
 .vidrio {
     width: 200px;
     height: 190px;
-    background-color: #E8E8E3;
+    background-color: #FFFFFF;
     clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
     position: absolute;
     top: 45%;
@@ -18,14 +44,57 @@
     border-radius: 6%;
 }
 
-.vidrio::before {
+.vidrio::after{
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    background-color: #E8E8E3;
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    width: 100%;
+    background-color: #FFFFFF;
     border-radius: 6%;
+    border-color: #E8E8E3;
+    border-style: solid;
+    border-width: 6px;
 }
+
+.coffee {
+    width: 120px;
+    height: 120px;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border-color: #E8E8E3;
+    border-style: solid;
+    border-width: 6px;
+}
+
+
+
+.vidrioBase {
+    width: 18px;
+    height: 129px;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 59.7%;
+    left: 51.5%;
+    border-radius: 7%;
+    transform: rotate(90deg);
+}
+
+.vidrioBase::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 6%;
+    border-color: #E8E8E3;
+    border-style: solid;
+    border-width: 6px;
+}
+
+
+
